@@ -33,7 +33,7 @@ require_once ('models/CasoModel.php');
 
         public function actualizar( $id ) {
             session_start();
-            if( !isset( $_SESSION['usuario']['id'] ) ){
+            if( !isset( $_SESSION['usuario']['id'] ) OR $_SESSION['usuario']['rol'] != 2 ){
                 header('location: '. URL_BASE .'user/index/');
             }
             $objCaso = new CasoModel();

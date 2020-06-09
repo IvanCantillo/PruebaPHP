@@ -46,7 +46,7 @@
         // --------------------------
 
         public function getAllCasos() {
-            $sqlCasos = 'SELECT casos.*, usuarios.fk_rol FROM casos INNER JOIN usuarios ON casos.fk_usuario = usuarios.id WHERE fk_rol = 2';
+            $sqlCasos = 'SELECT casos.*, usuarios.fk_rol FROM casos INNER JOIN usuarios ON casos.fk_usuario = usuarios.id';
             $casos = $this->conexion->prepare( $sqlCasos );
             $casos->execute( array( ":fk_usuario" => $this->fk_usuario ) );
             return $casos;
