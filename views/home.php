@@ -12,7 +12,7 @@
         <div class="row"> 
             <?php if( $_SESSION['usuario']['rol'] == 2 ): ?>
                 <div class="col-12 col-md-6 col-lg-6 col-xl-6 mt-3 mx-auto">
-                    <table class="table table-border">
+                    <table class="table table-border table-responsive">
                         <thead>
                             <tr>
                                 <th>#</th>

@@ -1,5 +1,7 @@
+import { URL_BASE } from '../parametros.js';
+
 async function register( data ) {
-    const response = await fetch("http://localhost/PruebaPHP/user/signUp/", {
+    const response = await fetch(URL_BASE + "user/signUp/", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -34,7 +36,7 @@ form_register.addEventListener( 'submit', async e => {
                 email_error.innerText = '';
             }, 3000);
         }else if (response.message == 'ok') {
-            window.location = 'http://localhost/PruebaPHP/inicio/index/';
+            window.location = URL_BASE + 'inicio/index/';
         }else{
 
         }

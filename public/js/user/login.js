@@ -1,5 +1,7 @@
+import { URL_BASE } from '../parametros.js';
+
 async function login( data ) {
-    const response = await fetch("http://localhost/PruebaPHP/user/signIn/", {
+    const response = await fetch(URL_BASE + "user/signIn/", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -17,7 +19,7 @@ form_login.addEventListener( 'submit', async e => {
     const data = new FormData( form_login );
     const response = await login( data );
     if (response.message == 'ok') {
-        window.location = 'http://localhost/PruebaPHP/inicio/index/';
+        window.location = URL_BASE + 'inicio/index/';
     }else {
         email_error.innerText = 'El usuario no esta registrado.';
         setTimeout(() => {

@@ -1,3 +1,4 @@
+
 ScrollReveal().reveal(".content-register-left", {
     duration: 3000,
     distance: "200px",

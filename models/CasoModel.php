@@ -53,9 +53,9 @@
         }
 
         public function getCasosById() {
-            $sqlCasos = 'SELECT * FROM casos WHERE fk_usuario = :fk_usuario AND id = :id';
+            $sqlCasos = 'SELECT * FROM casos WHERE id = :id';
             $casos = $this->conexion->prepare( $sqlCasos );
-            $casos->execute( array( ":fk_usuario" => $this->fk_usuario, ":id" => $this->id ) );
+            $casos->execute( array( ":id" => $this->id ) );
             return $casos->fetch( PDO::FETCH_ASSOC );
         }
 
